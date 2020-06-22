@@ -38,3 +38,12 @@ network.fit(train_images, train_labels, epochs=5, batch_size=128)
 test_loss, test_acc = network.evaluate(test_images, test_labels)
 print(f"test_acc={test_acc}")
 
+import numpy as np
+
+y = np.reshape(test_images, (10000, 28, 28))
+
+
+plt.imshow(y[3])
+plt.show()
+
+print(y.shape)
